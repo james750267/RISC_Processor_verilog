@@ -35,3 +35,19 @@ In my design the data from the Master can be send to all the Slave cores at one 
 - The Master send an acknowledgement to Slave to indicate that it has successfully received the data
 - The above protocol is repeated till the Master has received all the data from the slave core
 - After Master has received the data it can then set the slave ID for the next slave it wants the data from. The above protocol is repeated again.
+
+# Matrix Multiplication:
+The communication protocol is implemented in assembly to perform multiplication of the two 4x4 matrices. Each row of the resultant matrix is computed by one of the core in the 4-core system. Here the Master computes the first row, Slave0 computes the second row, Slave1 computes the third row and Slave2 computes the fourth row of the resultant matrix.
+
+# Benchmark Results:
+To evaluate the performance of the 4-core system we compute the total time taken (clock cycles) by the system to compute the output matrix once all the inputs are passed. For this additional performance counter logic is added in the processor that counts up the clock cycles once we initiate it. We further compare the performance of the designed 4-core system with the single-core system.
+
+Single core processor: 848 clock cycles
+
+4-Core Processor: 1358 clock cycles
+
+![image](https://user-images.githubusercontent.com/13079690/51195629-79a02480-18bb-11e9-8f96-4a82839449ca.png)
+
+It can be seen that the 4-core system take more time to perform the matrix multiplication task when compared to the single core system. This is due to the additional communication overhead in the 4-core system. 
+
+**Communication overhead in the 4-core system: 510 clock cycles
