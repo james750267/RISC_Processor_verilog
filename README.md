@@ -42,12 +42,12 @@ The communication protocol is implemented in assembly to perform multiplication 
 # Benchmark Results:
 To evaluate the performance of the 4-core system we compute the total time taken (clock cycles) by the system to compute the output matrix once all the inputs are passed. For this additional performance counter logic is added in the processor that counts up the clock cycles once we initiate it. We further compare the performance of the designed 4-core system with the single-core system.
 
-Single core processor: 848 clock cycles
+**Single core processor: 848 clock cycles**
 
-4-Core Processor: 1358 clock cycles
+**4-Core Processor: 1358 clock cycles**
 
 ![image](https://user-images.githubusercontent.com/13079690/51195629-79a02480-18bb-11e9-8f96-4a82839449ca.png)
 
 It can be seen that the 4-core system take more time to perform the matrix multiplication task when compared to the single core system. This is due to the additional communication overhead in the 4-core system. 
 
-**Communication overhead in the 4-core system: 510 clock cycles
+**Communication overhead in the 4-core system: 510 clock cycles**
