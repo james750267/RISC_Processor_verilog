@@ -5,9 +5,9 @@
 - Emulated the working of processor on FPGA board for matrix multiplication
 - Compared the performance of multicore and single-core processor for matrix multiplication benchmark
 
-# Cache Design
+# Cache Design: 2-Way Set Associative
 - Designed a 2-way Set Associative Cache (Level-1) memory for a 14-bit RISC Processor using verilog HDL
-- Specs: 8 block locations, 8 words/block
+- Specifications: 8 block locations, 8 words/block
 - Tag Memory is implemented as Content Addressable Memory (CAM)
 - Replacement policy: Last Recently Used (LRU)
 - Cache write-hit policy: Write-back policy is implemented (using dirty bit to check if block is modified)
