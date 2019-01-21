@@ -12,6 +12,7 @@
 - Replacement policy: Last Recently Used (LRU)
 - Cache write-hit policy: Write-back policy is implemented (using dirty bit to check if block is modified)
 - Cache write-miss policy: Write-allocate (bring entire block into cache, then update
+- Read-miss: Bring block form MM and wait until entire line is filled, then repeat the cache request
 
 # 4-Core processor and communication protocol:
 The processor is instantiated three times as Slave cores and the main processor is called the Master core. Master core has the access to the input and output peripherals of the FPGA board.
