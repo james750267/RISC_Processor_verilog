@@ -5,6 +5,14 @@
 - Emulated the working of processor on FPGA board for matrix multiplication
 - Compared the performance of multicore and single-core processor for matrix multiplication benchmark
 
+# Cache Design
+- Designed a 2-way Set Associative Cache (Level-1) memory for a 14-bit RISC Processor using verilog HDL
+- Specs: 8 block locations, 8 words/block
+- Tag Memory is implemented as Content Addressable Memory (CAM)
+- Replacement policy: Last Recently Used (LRU)
+- Cache write-hit policy: Write-back policy is implemented (using dirty bit to check if block is modified)
+- Cache write-miss policy: Write-allocate (bring entire block into cache, then update
+
 # 4-Core processor and communication protocol:
 The processor is instantiated three times as Slave cores and the main processor is called the Master core. Master core has the access to the input and output peripherals of the FPGA board.
 
